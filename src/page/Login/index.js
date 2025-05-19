@@ -12,19 +12,20 @@ const Login = () => {
     const navigate = useNavigate()
     const [uuid, setuuid] = useState('')
     const [base64Image, setBase64Image] = useState('');
-
-    useEffect(() => {
+    const handlerefreshCode = () => {
         axios.get('http://10.236.174.189:8087/code')
-           .then(res => {
-                const data = res.data.data;
-                setuuid(data.uuid);
-                setBase64Image(data.img);
-            })
-           .catch(err => {
-                console.log('出错了', err)
-            })
+        .then(res => {
+             const data = res.data.data;
+             setuuid(data.uuid);
+             setBase64Image(data.img);
+         })
+        .catch(err => {
+             console.log('出错了', err)
+         }) 
+    }
+    useEffect(() => {
+        handlerefreshCode();
     }, [])
-
     const handleSubmit = async (values) => {
         try {
             // 直接使用表单提交的值
@@ -76,6 +77,7 @@ const Login = () => {
                 content: '登录失败，请检查输入的各项是否正确',
                 duration: 1,
             });
+            handlerefreshCode();
         }
     }
 
@@ -106,7 +108,7 @@ const Login = () => {
                         <Form.Item className='testCode-L' name="code" rules={[{ required: true, message: '请输入验证码' }]}>
                             <Input className='code-input-L' placeholder='请输入验证码' />
                         </Form.Item>
-                        {base64Image && <img className='testPic-L' src={`data:image/png;base64,${base64Image}`} alt="Base64 Image" />}
+                        {base64Image && <img className='testPic-L' src={`data:image/png;base64,${base64Image}`} alt="Base64 Image" onClick={()=>handlerefreshCode()} />}
                     </Form>
                     <div className='form-box-trans'>
                         <h1 className='trans-title'>Welcome</h1>

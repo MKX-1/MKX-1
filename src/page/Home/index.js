@@ -9,12 +9,7 @@ import { Link } from 'react-router-dom';
 //得从后端拿到标签列表的数据和整个所有文章的列表数据，在这里我先进行一个模拟
 const Home = () => {
   const [tagOptions,setTagOptions] = useState([])
-  const [reqData,setreqData] = useState({
-    postId: '',
-    title: '',
-    labelId: '',
-    content: '',
-  }) 
+  const [searching,setsearching] = useState(false)
   const [count,setcount] = useState('')
   const [page,setpage] = useState(1)
   const [labelMap,setlabelMap] = useState([])
@@ -51,9 +46,9 @@ const Home = () => {
         },
         params:{
           postContent:form.getFieldValue('Content'),
-          labelId
-          :form.getFieldValue('labelId'),
+          labelId:form.getFieldValue('labelId'),
           postId:form.getFieldValue('id'),
+          pageNo:page,
         }
       })
       .then(res=>{
@@ -68,6 +63,7 @@ const Home = () => {
         })
         setcount(res.data.data.total)
         console.log("data",data);
+        setsearching(true)
         setdata(data) 
       })
      .catch(err=>{console.log(err)})
@@ -125,6 +121,7 @@ const Home = () => {
           setcount(res.data.data.total)
           console.log("data",data);
           setdata(data)
+          setsearching(false)
           form.resetFields()
         } 
       )
@@ -137,18 +134,13 @@ const Home = () => {
       fetchTags() 
     },[])
     useEffect(()=>{
-      fetchArticles()
+      if(searching){
+        handleFitler()
+      }
+      else{
+        fetchArticles()
+      }
     },[page]);
-    const handleRefresh = () =>{
-      setreqData({
-        postId: '',
-        title: '',
-        commentsCount: '',
-        likesCount: '',
-        publishTime: '',
-        label: '',
-      })
-    }
     return (
        <div className='home-wrapper'>
          <Breadcrumb

@@ -69,7 +69,7 @@ const Addarticle = () => {
           title:form.getFieldValue('title'),
           labelId:form.getFieldValue('tag'),
           content:form.getFieldValue('content'),
-          scheduledTime:now.format('YYYY-MM-DD HH:mm:ss')
+          scheduledTime:form.getFieldValue('scheduledTime')
          },
          headers:{
           'Authorization':getToken() 
@@ -164,6 +164,9 @@ const Addarticle = () => {
       <Form.Item label="点这里创建新的标签">
         <Input placeholder="输入标签内容" name="labelContent" onChange={(e)=>setContent(e.target.value)} className="labelAdd-box"/> 
         <Button type="primary" onClick={()=>handlePlus()}>标签+</Button>
+      </Form.Item>
+      <Form.Item label="定时发送（选填）" name="scheduledTime">
+        <Input placeholder="格式： xxxx-xx-xx xx:xx:xx" />
       </Form.Item> 
       <Form.Item
         label="正文"

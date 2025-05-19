@@ -86,7 +86,7 @@ const Article = () => {
            .catch((err) => {
                 console.log(err);
             });
-        navigator('/login');
+        navigator('/');
     };
 
     const cancel = () => {
@@ -118,6 +118,7 @@ const Article = () => {
                     </div>
                     <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
                     <Avatar src={`data:image/png;base64,${data.avatar}`} className='avatar-box' />
+                    <h3 className='userId-box'>{data.nickName}</h3>
                     <Popconfirm
                         title="登出"
                         description="你确定要登出吗？"

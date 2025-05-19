@@ -96,10 +96,10 @@ const Push = () => {
     .catch(err=>{console.log(err)})
     }
     useEffect(()=>{
-      fetchpushs()
       fetchTagsMap()
       fetchuserdata()
     },[])
+    useEffect(()=>{fetchpushs()},[page])
     return (
         <div className="push-wrapper">
           <Breadcrumb

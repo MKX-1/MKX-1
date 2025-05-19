@@ -37,7 +37,7 @@
     }
     .avatar-box{
       position: absolute;
-      right: 120px;
+      right: 180px;
       top: 14px;
     }
 }
@@ -73,4 +73,10 @@
         box-shadow: 0 0 30px rgba(0,0,0,.2);
       }
     }
+}
+.userId-box{
+    position: absolute;
+    right: 120px;
+    top:20px;
+    font-size: 14px;
 }

@@ -7,14 +7,14 @@ import Article from "../page/Article";
 import {AuthRoute} from "@/components/AuthRoute";
 import { Suspense } from "react";
 const Home = lazy(() => import("@/page/Home"))
-const Addarticle = lazy(() => import("@/page/Home"))
-const Editarticle = lazy(() => import("@/page/Home"))
-const Mine = lazy(() => import("@/page/Home"))
-const Minearticle = lazy(() => import("@/page/Home"))
-const Mineinfo = lazy(() => import("@/page/Home"))
-const Personainfor = lazy(() => import("@/page/Home"))
-const Push = lazy(() => import("@/page/Home"))
-const Articlecontainer = lazy(() => import("@/page/Home"))
+const Addarticle = lazy(() => import("@/page/Addarticle"))
+const Editarticle = lazy(() => import("@/page/Editarticle"))
+const Mine = lazy(() => import("@/page/Mine"))
+const Minearticle = lazy(() => import("@/page/Minearticle"))
+const Mineinfo = lazy(() => import("@/page/Mineinfo"))
+const Personainfor = lazy(() => import("@/page/Personainfor"))
+const Push = lazy(() => import("@/page/Push"))
+const Articlecontainer = lazy(() => import("@/page/Ariticlecontainer"))
 const router = createBrowserRouter([
       {
         path:"/",

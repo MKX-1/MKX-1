@@ -160,7 +160,7 @@ const Editarticle = () => {
     return (
     <>
     {contextHolder} 
-    <div className="add-wrapper">
+    <div className="edit-wrapper">
         <Breadcrumb
             items={[
                 {
