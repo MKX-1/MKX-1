@@ -131,22 +131,29 @@ const Articlecontainer = () => {
                 _t: new Date().getTime()
             }
         }).then((res) => {
-            // const allComments = ;
-            setcomments(res.data.data);
+            const allComments = res.data.data;
+            setcomments(allComments);
             setcommentsCount(res.data.data.length);
             // 初始化一个新的头像映射对象
             const newAvatarMap = { ...avatarMap };
-            const avatarPromise = [];
+            // 存储所有头像请求的 Promise
+            const avatarPromises = [];
+
             // 遍历评论列表，为每个未获取头像的用户发起请求
-            for (const comment of res.data.data) {
+            for (const comment of allComments) {
                 const userId = comment.commentsPO.userId;
                 if (!newAvatarMap[userId]) {
-                    const promise = GetAvatarAPI(userId).then((res)=>{newAvatarMap[userId] = res;})
-                    avatarPromise.push(promise);
+                    const promise = GetAvatarAPI(userId).then((res) => {
+                        newAvatarMap[userId] = res;
+                    });
+                    avatarPromises.push(promise);
                 }
             }
-            Promise.all(avatarPromise).then(()=>{setAvatarMap(newAvatarMap)});
-            // 更新头像映射状态
+
+            // 等待所有头像请求完成后更新状态
+            Promise.all(avatarPromises).then(() => {
+                setAvatarMap(newAvatarMap);
+            });
         }).catch((err) => { console.log(err) });
     };
     const GetAvatarAPI = async (userId) => {

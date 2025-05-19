@@ -77,7 +77,7 @@ const Register = () =>{
               duration: 1,
           });
           setTimeout(() => {
-              navigate('/login')
+              navigate('/')
           }, 1000);
       }
     }

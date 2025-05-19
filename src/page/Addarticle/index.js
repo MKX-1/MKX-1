@@ -10,21 +10,15 @@ import {
   Select,
   Breadcrumb,
   message,
-  Upload,
 } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
 import { useNavigate } from "react-router-dom"; 
-import { request } from "@/utils/request";
 import axios from "axios";
-import dayjs from "dayjs";
 import { getToken } from "@/utils/token";
 const Addarticle = () => {
     const [content,setContent] = useState('')
-    const [results,setresults] = useState([]) 
     const navigator = useNavigate();
     const [messageApi, contextHolder] = message.useMessage();
     const [tagOptions,setTagOptions] = useState([])
-    const now = dayjs();
     const [form] = Form.useForm()
     const formItemLayout = {
         labelCol: {
@@ -165,9 +159,9 @@ const Addarticle = () => {
         <Input placeholder="输入标签内容" name="labelContent" onChange={(e)=>setContent(e.target.value)} className="labelAdd-box"/> 
         <Button type="primary" onClick={()=>handlePlus()}>标签+</Button>
       </Form.Item>
-      <Form.Item label="定时发送（选填）" name="scheduledTime">
+      {/* <Form.Item label="定时发送（选填）" name="scheduledTime">
         <Input placeholder="格式： xxxx-xx-xx xx:xx:xx" />
-      </Form.Item> 
+      </Form.Item>  */}
       <Form.Item
         label="正文"
         name="content"
