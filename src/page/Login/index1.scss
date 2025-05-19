@@ -1,0 +1,169 @@
+@keyframes fadein{
+  from{opacity: 0;top:-50px;}
+  to{opacity: 1;top:0px; }
+}
+@keyframes fade{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+@keyframes radiuschange2{
+  from{border-radius: 6px 8px 8px 6px;width: 60%;}
+  to{border-radius: 6px 80px 80px 6px;width: 50%;}
+}
+.container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg,#e2e2e2,#c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      .form-box-login{
+        width: 955px;
+        height: 620px;
+        position: relative;
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 0 30px rgba(0,0,0,.2);
+       }
+       .login-section{
+        width: 50%;
+        height: 100%;
+        margin: 0px 0px 8px 0px;
+        padding-left: 14px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        }
+        .login-button{
+          width: 400px;
+          height: 60px;
+          font-size: 30px;
+          position: relative;
+          bottom: -125px;
+          left: -10px;
+          border-radius: 20px;
+          }
+          .login-section-upper{
+           width: 100%; 
+           font-size: 56px;
+           margin-bottom: 0px;
+           margin-top: 30px;
+          }
+          .login-section-lower{
+           width: 100%; 
+           font-size: 56px;
+           margin-top: 10px;
+           margin-bottom: -10px;
+          }
+          .login-input{
+            width: 90%;
+            height: 80px;
+            font-size: 26px;
+            margin-top: 50px;
+            margin-right: 8px;
+            margin-left: 14px;
+            right: 4px;
+            position: relative;
+            border-radius: 12px;
+          }
+          .password-input{
+            width: 90%;
+            height: 80px;
+            font-size: 26px;
+            margin-right: 3px;
+            margin-left: 10px;
+            border-radius: 12px;
+          }
+          .ant-form-item-explain-error{
+           font-size: 24px;
+          }
+          .login-title{
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            text-align: center;
+            margin-right: 12px;
+            opacity: 0.8;
+            margin-bottom: 0px;
+            position: absolute;
+            margin-top: 50px;
+            top: 0;
+            animation: fadein 0.75s ease-in forwards;
+          }
+        .Alert-section{
+            width: 80%;
+            height: 10px;
+            font-size: 10px;
+            margin-top: 10px;
+            position: relative;
+            top: 20px;
+            left: 3px;
+            transition: all 0.3s ease-in-out;
+            margin-right: 14px;
+          }
+        .form-box-trans{
+            width: 50%;
+            height: 100%;
+            background-color: #fff;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px 8px 8px 6px;
+            background-color: skyblue;
+            animation: radiuschange2 1s ease-in forwards;
+            .trans-title{
+                color: white;
+                text-align: center;
+                font-size: 80px;
+                animation: fadein 1s ease-in forwards;
+            }
+           .trans-button{
+                width: 200px;
+                height: 60px;
+                font-size: 28px;
+                position: relative;
+                color: black;
+                background-color: #fff;
+                border-radius: 20px;
+                animation: fade 1s ease-in forwards;
+            }
+        }
+        .testCode-L{
+          width: 200px;
+          height: 30px;
+          position: absolute;
+          bottom: 155px;
+          left: 30px;
+          .code-input-L{
+             position: absolute;
+             height: 50px;
+             border-radius: 20px;
+          }
+        }
+        .ant-form-item-additional{
+          #code_help{
+            position: relative;
+            top: 40px; 
+            .ant-form-item-explain-error{
+              font-size: 20px;
+              left: 6px;
+            }
+          }
+        }
+        .testPic-L{
+          position: absolute;
+          bottom: 140px;
+          left: 240px;
+          width: 150px;
+          height: 50px;
+          border-radius: 2px;
+        }
+}

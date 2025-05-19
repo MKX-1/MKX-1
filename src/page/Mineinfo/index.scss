@@ -1,0 +1,27 @@
+.personal-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    margin-bottom: 200px;
+}
+.Mineinfo-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    .Mineinfo-pic{
+        display: flex;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+}
+.Editinfo-button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}

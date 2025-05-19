@@ -1,0 +1,22 @@
+.add-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    .personal-info-box{
+       position: relative;
+       top: 20px; 
+   }
+    .publish-quill{
+       .ql-editor{
+         min-height: 300px;
+       }
+   }
+   .labelAdd-box{
+      width: 200px;
+      margin-right: 20px;
+   }
+}

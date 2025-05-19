@@ -1,0 +1,255 @@
+@keyframes fadefromright{
+  from{opacity: 0; right: 100px;}
+  to{opacity: 1; right: 0;}
+}
+@keyframes radiuschange{
+  from{border-radius: 8px 6px 6px 8px;width: 60%;}
+  to{border-radius: 80px 6px 6px 80px;width: 50%;}
+}
+.container1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg,#e2e2e2,#c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      .form-box-reg{
+        width: 1050px;
+        height: 850px;
+        position: relative;
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 0 30px rgba(0,0,0,.2);
+       }
+       .reg-section{
+        width: 50%;
+        height: 100%;
+        margin: 0px 0px 8px 0px;
+        padding-left: 14px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        }
+          .reg-button{
+           width: 150px;
+           height: 60px;
+           font-size: 28px;
+           position: relative;
+           bottom: -230px;
+           left: -150px;
+          }
+          .reset-button{
+           width: 150px;
+           height: 60px;
+           font-size: 28px;
+           position: relative;
+           bottom: -230px;
+           left: -150px;
+          }
+          .select-box{
+           width: 600px;
+           height: 60px; 
+           font-size: 28px;
+           position: relative;
+           left: 80px;
+           top:90px;
+           border-radius: 20px;
+           .select-gender{
+            width: 200px;
+            height: 60px;
+            position: relative;
+            font-size: 28px;
+            border-radius: 20px;
+           }
+           .ant-select-selector{
+            border-radius: 20px;
+            font-size: 20px;
+           }
+           #control-hooks_gender_help{
+            font-size: 6px;
+            position: relative;
+            left: 10px;
+            top: -110px;
+           }
+          }
+          .reg-title{
+            font-size: 50px;
+            text-align: center;
+            margin-right: 12px;
+            opacity: 0.8;
+            margin-bottom: 0px;
+            position: absolute;
+            top:15px;
+            left: 160px;
+            animation: fade 0.75s ease-in forwards;
+          }
+          .name-box{
+            width: 600px;
+            height: 60px;
+            font-size: 30px;  
+           .name-input{
+            font-size: 20px;
+            height: 60px;
+            width: 100%;
+            position: relative;
+            left: 80px;
+            top: 60px;
+            border-radius: 20px;
+           }
+           #control-hooks_name_help{
+            font-size: 26px;
+            position: relative;
+            top: -60px;
+            left: 90px;
+          }
+          }
+          .account-input{
+            font-size: 20px;
+            width: 600px;
+            height: 60px;
+            position: relative;
+            left: 80px;
+            top: 70px;
+            border-radius: 20px;
+          }
+          #control-hooks_account_help{
+            font-size: 6px;
+            position: relative;
+            top: -50px;
+            left: 90px;
+          }
+          .password-input1{
+            font-size: 20px;
+            width: 600px;
+            height: 50px;
+            position: relative;
+            left: 80px;
+            top: 80px;
+            border-radius: 20px;
+          }
+          #control-hooks_password_help{
+            font-size: 6px;
+            position: relative;
+            top: -40px;
+            left: 90px;
+          }
+          .Alert-section{
+            width: 40%;
+            height: 10px;
+            font-size: 10px;
+            margin-top: 10px;
+            position: absolute;
+            top: 64px;
+            left: 20px;
+            transition: all .3s;
+            margin-right: 14px;
+          }
+        .form-box-trans-reg{
+            width: 50%;
+            height: 100%;
+            background-color: #fff;
+            position: absolute;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px 6px 6px 8px;
+            background-color: skyblue;
+            animation: radiuschange 1s ease-in forwards;
+            .trans-title-reg{
+                color: white;
+                text-align: center;
+                font-size: 50px;
+                position: relative;
+                animation: fadefromright 1s ease-in forwards;
+            }
+            .trans-button{
+                width: 200px;
+                height: 60px;
+                font-size: 28px;
+                position: relative;
+                color: black;
+                background-color: #fff;
+                border-radius: 20px;
+                animation: fadefromright 1s ease-in forwards;
+            }
+        }
+        .ant-form-item-explain-error{
+            font-size: 20px;
+            position: relative;
+            top: 118px;
+            left: -10px;
+        }
+        .ant-upload.ant-upload.ant-upload-select{
+            font-size: 28px;
+            width: 102px;
+            height: 102px;
+            position: relative;
+            left: 50px;
+            .ant-upload{
+                font-size: 28px;
+                button{
+                  div{
+                    font-size: 20px!important;
+                    width: 80px!important;
+                    height: 80px!important;
+                  }
+                }
+            }
+        }
+        .ant-form-item-control-input-content{
+            display: flex;
+            .ant-upload-wrapper.ant-upload-picture-card-wrapper .ant-upload-list.ant-upload-list-picture-card{
+              flex-wrap: nowrap;
+            }
+        }
+        .reg-buttons{
+            position: relative;
+            left: -20px;
+            top: -80px;
+        }
+        .avatar-box{
+            position: relative;
+            top: 100px;
+            left: -165px;
+            display: flex;
+            flex-direction: row;
+        }
+        .ant-upload-list-item-container{
+            font-size: 28px;
+            position: relative;
+            left: 50px;
+        }
+        .testCode{
+            width: 200px;
+            height: 30px;
+            position: absolute;
+            bottom: 110px;
+            left: 50px;
+            .code-input{
+               position: absolute;
+            }
+            #control-hooks_code_help{
+              position: relative;
+              top: -100px; 
+              .ant-form-item-explain-error{
+                font-size: 14px;
+                left: 6px;
+              }
+            }
+        }
+        .testPic{
+          position: absolute;
+          bottom: 100px;
+          left: 200px;
+          width: 150px;
+          height: 50px;
+        }
+}

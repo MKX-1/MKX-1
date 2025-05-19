@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box; 
+  margin: 0;
+}
+#root{
+  height: 100%;  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+#waifu{
+  z-index:1001;
+  position:fixed;
+  bottom:0;
+}
